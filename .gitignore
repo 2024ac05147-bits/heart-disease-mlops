@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+pytest-results.xml
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+.lock-venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment and logs
+.env
+*.log
+
+# MLflow runtime
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+mlartifacts/
+mlruns/
+
+# CI runtime
+.ci-output/
+
+# Generated deployment output
+deployment/kubernetes/rendered-manifests.yaml
+deployment/monitoring/.env
+
+# Transfer files
+*.zip
+
+# Operating system
+Thumbs.db
+.DS_Store

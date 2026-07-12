@@ -1,0 +1,37 @@
+{
+  "dataset_name": "Heart Disease",
+  "repository_url": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+  "row_count_before_deduplication": 920,
+  "column_count": 17,
+  "source_distribution": {
+    "cleveland": 303,
+    "hungarian": 294,
+    "switzerland": 123,
+    "va_long_beach": 200
+  },
+  "exact_duplicates_within_source": 2,
+  "records_matching_across_any_source": 4,
+  "target_distribution": {
+    "0": 411,
+    "1": 509
+  },
+  "target_percentage": {
+    "0": 44.67,
+    "1": 55.33
+  },
+  "missing_values": {
+    "age": 0,
+    "sex": 0,
+    "cp": 0,
+    "trestbps": 59,
+    "chol": 30,
+    "fbs": 90,
+    "restecg": 2,
+    "thalach": 55,
+    "exang": 55,
+    "oldpeak": 62,
+    "slope": 309,
+    "ca": 611,
+    "thal": 486
+  }
+}

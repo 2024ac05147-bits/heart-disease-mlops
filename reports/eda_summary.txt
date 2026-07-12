@@ -1,0 +1,38 @@
+EDA SUMMARY
+===========
+Rows: 918
+Columns: 17
+Duplicate full rows: 0
+Duplicate feature-target rows: 0
+Positive heart disease class: 55.34%
+
+Class distribution:
+- Target 0: 410 (44.66%)
+- Target 1: 508 (55.34%)
+
+Source distribution:
+- cleveland: 303
+- hungarian: 293
+- switzerland: 123
+- va_long_beach: 199
+
+Heart disease rate by source:
+- cleveland: 45.87%
+- hungarian: 36.18%
+- switzerland: 93.5%
+- va_long_beach: 74.37%
+
+Missing values:
+- age: 0 (0.0%)
+- trestbps: 60 (6.54%)
+- chol: 201 (21.9%)
+- thalach: 55 (5.99%)
+- oldpeak: 62 (6.75%)
+- sex: 0 (0.0%)
+- cp: 0 (0.0%)
+- fbs: 90 (9.8%)
+- restecg: 2 (0.22%)
+- exang: 55 (5.99%)
+- slope: 307 (33.44%)
+- ca: 609 (66.34%)
+- thal: 484 (52.72%)

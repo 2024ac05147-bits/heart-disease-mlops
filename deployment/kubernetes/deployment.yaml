@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heart-disease-api
+  namespace: heart-disease
+  labels:
+    app.kubernetes.io/name: heart-disease-api
+    app.kubernetes.io/component: api
+    app.kubernetes.io/part-of: heart-disease-mlops
+spec:
+  replicas: 2
+
+  revisionHistoryLimit: 3
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: heart-disease-api
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: heart-disease-api
+        app.kubernetes.io/component: api
+        app.kubernetes.io/part-of: heart-disease-mlops
+
+    spec:
+      terminationGracePeriodSeconds: 30
+
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+
+      containers:
+        - name: heart-disease-api
+
+          # Local Kubernetes:
+          #   build and load heart-disease-api:1.0.0 into the cluster.
+          #
+          # Public registry later:
+          #   replace with ghcr.io/2024ac05147-bits/heart-disease-api:1.0.0
+          image: heart-disease-api:1.0.0
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+
+          env:
+            - name: MODEL_PATH
+              value: /app/models/heart_disease_pipeline.joblib
+
+            - name: MODEL_METADATA_PATH
+              value: /app/models/model_metadata.json
+
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+
+          startupProbe:
+            httpGet:
+              path: /health/live
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 12
+
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+            successThreshold: 1
+
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 3
+            failureThreshold: 3
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 192Mi
+
+            limits:
+              cpu: 500m
+              memory: 512Mi

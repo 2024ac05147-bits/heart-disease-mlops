@@ -1,0 +1,19 @@
+{
+  "model_name": "Logistic Regression",
+  "selection_reason": "Highest five-fold stratified cross-validation ROC-AUC",
+  "cv_roc_auc": 0.8897521528957842,
+  "test_accuracy": 0.8586956521739131,
+  "test_precision": 0.8653846153846154,
+  "test_recall": 0.8823529411764706,
+  "test_f1": 0.8737864077669902,
+  "test_roc_auc": 0.9359158297465328,
+  "training_rows": 734,
+  "test_rows": 184,
+  "random_state": 42,
+  "best_parameters": {
+    "classifier__C": 0.1,
+    "classifier__solver": "liblinear"
+  },
+  "model_file": "heart_disease_pipeline.joblib",
+  "medical_disclaimer": "This model is an academic demonstration and is not intended for clinical diagnosis or treatment decisions."
+}

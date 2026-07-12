@@ -1,0 +1,189 @@
+{
+  "rows": 918,
+  "columns": 17,
+  "duplicate_rows_full_record": 0,
+  "duplicate_feature_target_rows": 0,
+  "class_counts": {
+    "0": 410,
+    "1": 508
+  },
+  "class_percentages": {
+    "0": 44.66,
+    "1": 55.34
+  },
+  "positive_class_percentage": 55.34,
+  "source_distribution": {
+    "cleveland": 303,
+    "hungarian": 293,
+    "switzerland": 123,
+    "va_long_beach": 199
+  },
+  "target_rate_by_source": {
+    "cleveland": 45.87,
+    "hungarian": 36.18,
+    "switzerland": 93.5,
+    "va_long_beach": 74.37
+  },
+  "missing_values": {
+    "age": 0,
+    "trestbps": 60,
+    "chol": 201,
+    "thalach": 55,
+    "oldpeak": 62,
+    "sex": 0,
+    "cp": 0,
+    "fbs": 90,
+    "restecg": 2,
+    "exang": 55,
+    "slope": 307,
+    "ca": 609,
+    "thal": 484
+  },
+  "missing_value_percentages": {
+    "age": 0.0,
+    "trestbps": 6.54,
+    "chol": 21.9,
+    "thalach": 5.99,
+    "oldpeak": 6.75,
+    "sex": 0.0,
+    "cp": 0.0,
+    "fbs": 9.8,
+    "restecg": 0.22,
+    "exang": 5.99,
+    "slope": 33.44,
+    "ca": 66.34,
+    "thal": 52.72
+  },
+  "numeric_summary": {
+    "age": {
+      "count": 918.0,
+      "mean": 53.511,
+      "std": 9.433,
+      "min": 28.0,
+      "25%": 47.0,
+      "50%": 54.0,
+      "75%": 60.0,
+      "max": 77.0
+    },
+    "trestbps": {
+      "count": 858.0,
+      "mean": 132.291,
+      "std": 18.532,
+      "min": 80.0,
+      "25%": 120.0,
+      "50%": 130.0,
+      "75%": 140.0,
+      "max": 200.0
+    },
+    "chol": {
+      "count": 717.0,
+      "mean": 246.872,
+      "std": 58.559,
+      "min": 85.0,
+      "25%": 210.0,
+      "50%": 240.0,
+      "75%": 277.0,
+      "max": 603.0
+    },
+    "thalach": {
+      "count": 863.0,
+      "mean": 137.542,
+      "std": 25.937,
+      "min": 60.0,
+      "25%": 120.0,
+      "50%": 140.0,
+      "75%": 157.0,
+      "max": 202.0
+    },
+    "oldpeak": {
+      "count": 856.0,
+      "mean": 0.881,
+      "std": 1.092,
+      "min": -2.6,
+      "25%": 0.0,
+      "50%": 0.5,
+      "75%": 1.5,
+      "max": 6.2
+    },
+    "sex": {
+      "count": 918.0,
+      "mean": 0.79,
+      "std": 0.408,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "cp": {
+      "count": 918.0,
+      "mean": 3.252,
+      "std": 0.931,
+      "min": 1.0,
+      "25%": 3.0,
+      "50%": 4.0,
+      "75%": 4.0,
+      "max": 4.0
+    },
+    "fbs": {
+      "count": 828.0,
+      "mean": 0.167,
+      "std": 0.373,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 1.0
+    },
+    "restecg": {
+      "count": 916.0,
+      "mean": 0.605,
+      "std": 0.806,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 1.0,
+      "max": 2.0
+    },
+    "exang": {
+      "count": 863.0,
+      "mean": 0.389,
+      "std": 0.488,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "slope": {
+      "count": 611.0,
+      "mean": 1.771,
+      "std": 0.619,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 2.0,
+      "max": 3.0
+    },
+    "ca": {
+      "count": 309.0,
+      "mean": 0.676,
+      "std": 0.936,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 1.0,
+      "max": 3.0
+    },
+    "thal": {
+      "count": 434.0,
+      "mean": 5.088,
+      "std": 1.919,
+      "min": 3.0,
+      "25%": 3.0,
+      "50%": 6.0,
+      "75%": 7.0,
+      "max": 7.0
+    }
+  }
+}
